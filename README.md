@@ -1,1 +1,3 @@
-# Syntecxhub_Project_Name
+# Project Name
+
+Description of the project
