@@ -85,5 +85,5 @@ Data Visualization & Modeling: Power BI Desktop
 DAX (Data Analysis Expressions): Used to construct calculated columns and measures for RFM scoring, customer counts, and ranking.
 Data Source: Structured E-commerce Datasets (Excel/SQL Server)
 
-
+!(image alt)(https://github.com/udeme054/Syntecxhub_Project_Name/blob/d81d8959ee3e26a350e3622faef32b5217dc009b/Customer%20Profile%20page%201.jpg)
 
