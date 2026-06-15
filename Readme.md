@@ -86,4 +86,5 @@ DAX (Data Analysis Expressions): Used to construct calculated columns and measur
 Data Source: Structured E-commerce Datasets (Excel/SQL Server)
 
 ![alt text](https://github.com/udeme054/Syntecxhub_Project_Name/blob/d81d8959ee3e26a350e3622faef32b5217dc009b/Customer%20Profile%20page%201.jpg)
+![alt text](https://github.com/udeme054/Syntecxhub_Project_Name/blob/f87655ae13cea326eed866e2f7c4de2f8294f17b/Customer%20Segmentation%20page%202.jpg)
 
