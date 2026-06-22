@@ -16,18 +16,19 @@ The primary objective is to track key performance indicators (KPIs), analyze emp
 
 ## Core Insights & Visualizations 
 
-### Attrition Analysis by Demographics 
+### 1. Attrition Analysis by Demographics 
 1. By Department: Research & Development experiences the highest chunk of total attrition in percentage (56), followed by Sales (39) and Human Resources (5). 
 2. By Gender: Male employees account for a significantly higher proportion of attrition (63 percent, 151 count) compared to female employees (37 percent, 87 count). 
 3. By Age Group: Attrition peaks sharply in the **18–25 age bracket** (reaching the highest overall *rate* of attrition), while the **26–35 age bracket** holds the highest absolute *count* of employees leaving. 
 
-### Attrition by Compensation & Role 
+### 2. Attrition by Compensation & Role 
 1.Salary Slab: Employees earning **Upto 5k/month** represent the highest risk group, suffering the largest number of departures (163). As salary slabs increase, attrition counts drastically decline. 
 2.Job Role & Satisfaction Matrix: A detailed cross-tabulation mapping Job Roles against Job Satisfaction scores (1 to 4). **Laboratory Technicians** (62 total), **Sales Executives** (58 total), and **Research Scientists** (47 total) show the highest overall attrition, heavily concentrated among low-satisfaction scores. 
 
-### Education & Business Travel Trends 
+### 3. Education & Business Travel Trends 
 1. Education Field: Employees with backgrounds in **Life Sciences** (41 percent) and **Medical** (32 percent) make up the vast majority of the tracked workforce distribution. 
 2. Business Travel: Employees who Travel Rarely make up the highest absolute volume of attrition (157), followed by frequent travelers (69). 
+
 ### Dax functions used in this project
 
 ## Tools Used
