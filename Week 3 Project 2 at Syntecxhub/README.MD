@@ -52,7 +52,7 @@ Department, Age Group, Education Field, Gender, Marital Status, Business Travel 
 ● Linkedlin link:https://www.linkedin.com/posts/udeme-jackson-0a0887144_powerbi-hranalytics-dataanalytics-activity-7473634834574286848-RZja?utm_source=share&utm_medium=member_desktop&rcm=ACoAACMDV7gBXE-tE0ZG2fYv2alSEQVhZV173Wc
 
 # Project gallery
-![alt text](
+![alt text](https://github.com/udeme054/Syntecxhub_Project_Name/blob/c9da8cde316bcc6c45f887a9293c64799969f433/Week%203%20Project%202%20at%20Syntecxhub/Picture%20of%20HR%20Analytics%20Dashboard%20for%20Week%203%20of%20Project%202.jpg)
 
 
 
