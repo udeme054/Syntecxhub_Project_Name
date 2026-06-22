@@ -31,6 +31,13 @@ The primary objective is to track key performance indicators (KPIs), analyze emp
 2. Business Travel: Employees who Travel Rarely make up the highest absolute volume of attrition (157), followed by frequent travelers (69). 
 
 ### Dax functions used in this project
+1. Attrtition rate = SUM(HR_Analytics[Attrition count]/SUM(HR_Analytics[Employee count])
+2. Average age = AVERAGE(HR_Analytics[Age])
+3. Average Monthly Salary = AVERAGE(HR_Analytics[MonthlyIncome])
+4. Average tenure = AVERAGE(HR_Analytics[YearsAtcompany])
+5. Total Employees = COUNT(HR_Analytics[EmpID])
+6. Attrition count = CALCULATE(COUNT(HR_Analytics[EmpID]),(HR_Analytics[Attrition]='Yes')
+7. Active Employees =  [Total Employees]-[Attrition count] 
 
 ## Tools Used
 1. Data Visualization: Power BI Desktop 
