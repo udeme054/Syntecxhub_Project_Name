@@ -46,7 +46,7 @@ Department, Age Group, Education Field, Gender, Marital Status, Business Travel 
 2. Targeted Retention for Early Careers: Focus retention programs, mentorship opportunities, and clear career paths toward the **18–35 age groups, where turnover is concentrated. 
 3. Role-Specific Interventions:** Address the work environment and specific stressors impacting **Laboratory Technicians** and **Sales Executives** who report low job satisfaction scores.
 
-
+How to view and run the file 
 1. Open the Project:
 ○ Open the .pbix or source file using your visualization software.
 ○ Alternatively, view the static snapshot provided in the /images folder.
