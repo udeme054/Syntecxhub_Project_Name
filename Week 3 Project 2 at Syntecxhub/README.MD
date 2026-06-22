@@ -46,14 +46,15 @@ Department, Age Group, Education Field, Gender, Marital Status, Business Travel 
 2. Targeted Retention for Early Careers: Focus retention programs, mentorship opportunities, and clear career paths toward the **18–35 age groups, where turnover is concentrated. 
 3. Role-Specific Interventions:** Address the work environment and specific stressors impacting **Laboratory Technicians** and **Sales Executives** who report low job satisfaction scores.
 
-How to view and run the file 
-1. Open the Project:
-○ Open the .pbix or source file using your visualization software.
-○ Alternatively, view the static snapshot provided in the /images folder.
-2. Interact: Use the filter cards on the right-hand panel to isolate data by specific demographics or employment categories.
+How to run/view run the project
+1.Dashboard: Open the dashboard file in the week 3 project 2 at syntecxhub folder
+
 👤 Author
 ● Udeme Jackson
-● Linkedlin link: 
+● Linkedlin link:https://www.linkedin.com/posts/udeme-jackson-0a0887144_powerbi-hranalytics-dataanalytics-activity-7473634834574286848-RZja?utm_source=share&utm_medium=member_desktop&rcm=ACoAACMDV7gBXE-tE0ZG2fYv2alSEQVhZV173Wc
+
+# Project gallery
+![alt text](
 
 
 
