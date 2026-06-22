@@ -41,7 +41,7 @@ The primary objective is to track key performance indicators (KPIs), analyze emp
 Users can dynamically slice and dice the data using the right-hand filter pane to uncover specific sub-trends: 
 Department, Age Group, Education Field, Gender, Marital Status, Business Travel Frequency, Salary Slab 
 
-## Key Recommendations based on Data 
+## Key Recommendations
 1. Re-evaluate Entry-Level Compensation: Because the "Upto 5k" salary slab accounts for the vast majority of attrition, reviewing the competitive market rate for entry-level roles is crucial.
 2. Targeted Retention for Early Careers: Focus retention programs, mentorship opportunities, and clear career paths toward the **18–35 age groups, where turnover is concentrated. 
 3. Role-Specific Interventions:** Address the work environment and specific stressors impacting **Laboratory Technicians** and **Sales Executives** who report low job satisfaction scores.
