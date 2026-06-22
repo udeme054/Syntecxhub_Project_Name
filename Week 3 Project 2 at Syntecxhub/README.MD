@@ -23,6 +23,7 @@ The primary objective is to track key performance indicators (KPIs), analyze emp
 
 ### 2. Attrition by Compensation & Role 
 1.Salary Slab: Employees earning **Upto 5k/month** represent the highest risk group, suffering the largest number of departures (163). As salary slabs increase, attrition counts drastically decline. 
+
 2.Job Role & Satisfaction Matrix: A detailed cross-tabulation mapping Job Roles against Job Satisfaction scores (1 to 4). **Laboratory Technicians** (62 total), **Sales Executives** (58 total), and **Research Scientists** (47 total) show the highest overall attrition, heavily concentrated among low-satisfaction scores. 
 
 ### 3. Education & Business Travel Trends 
