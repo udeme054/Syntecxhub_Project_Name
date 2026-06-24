@@ -44,7 +44,7 @@ Department, Age Group, Education Field, Gender, Marital Status, Business Travel 
 ## Key Recommendations
 1. Re-evaluate Entry-Level Compensation: Because the "Upto 5k" salary slab accounts for the vast majority of attrition, reviewing the competitive market rate for entry-level roles is crucial.
 2. Targeted Retention for Early Careers: Focus retention programs, mentorship opportunities, and clear career paths toward the **18–35 age groups, where turnover is concentrated. 
-3. Role-Specific Interventions:** Address the work environment and specific stressors impacting **Laboratory Technicians** and **Sales Executives** who report low job satisfaction scores.
+3. Role-Specific Interventions: Address the work environment and specific stressors impacting Laboratory Technicians and Sales Executives who report low job satisfaction scores.
 
 ## How to run/view run the project
 1.Dashboard: Open the dashboard file in the week 3 project 2 at syntecxhub folder to interact with the visualization
