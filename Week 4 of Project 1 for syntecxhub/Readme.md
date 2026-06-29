@@ -249,8 +249,11 @@ Bank-Loan-Dashboard/
 5. Publish the dashboard to the Power BI Service with scheduled data refresh.
 
 # Photo gallery
-# Summary of Bank Load dashboard
+# Summary of Bank Load report
 ![Alt text](https://github.com/udeme054/Syntecxhub_Project_Name/blob/683ec23eedabe1cbf5c7a3001ba8ca915ec701b2/Week%204%20of%20Project%201%20for%20syntecxhub/Summary%20of%20Bank%20Loan%20report.jpg)
+
+# Overview of Bank Load report
+![Alt text](https://github.com/udeme054/Syntecxhub_Project_Name/blob/12c3cf6ed7a7a0dcaf3c4aa4cd07d3ed1cf92ff3/Week%204%20of%20Project%201%20for%20syntecxhub/Overview%20of%20Bank%20loan%20report.jpg)
 
 
 
