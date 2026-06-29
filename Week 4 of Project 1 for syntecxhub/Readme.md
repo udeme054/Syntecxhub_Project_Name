@@ -24,3 +24,13 @@ This project consists of three interactive dashboard pages:
 12. Repository Structure
 13. Future Improvements
 Author
+
+# Project Objective
+
+The objective of this project is to develop an interactive Power BI dashboard that enables stakeholders to:
+1. Monitor loan application performance.
+2. Track funded and recovered loan amounts.
+3. Evaluate loan quality (Good vs Bad loans).
+4. Identify customer borrowing patterns.
+5. Monitor loan repayment status.
+6. Support data-driven lending decisions.
