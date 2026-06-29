@@ -255,6 +255,9 @@ Bank-Loan-Dashboard/
 # Overview of Bank Load report
 ![Alt text](https://github.com/udeme054/Syntecxhub_Project_Name/blob/12c3cf6ed7a7a0dcaf3c4aa4cd07d3ed1cf92ff3/Week%204%20of%20Project%201%20for%20syntecxhub/Overview%20of%20Bank%20loan%20report.jpg)
 
+# Details of Bank Load report
+![Alt text](https://github.com/udeme054/Syntecxhub_Project_Name/blob/501018a320627ba4d0a3ed7d1f5f6dcb9ec5fa1a/Week%204%20of%20Project%201%20for%20syntecxhub/Details%20of%20Bank%20Loan%20report.jpg)
+
 
 
 
