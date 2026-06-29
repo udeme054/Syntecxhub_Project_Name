@@ -73,3 +73,195 @@ The dataset contains historical bank loan records including:
 4. DAX (Data Analysis Expressions)
 5. Data Modeling
 6. Interactive Visualizations
+
+# Step 1 – Data Cleaning & Preparation
+
+The dataset was prepared using Power Query before visualization.
+1. Data cleaning steps
+2  Removed duplicate records.
+3. Corrected inconsistent data types.
+4. Converted dates into proper Date format.
+5. Handled missing values.
+6. Renamed columns for readability.
+7. Standardized categorical values.
+8. Removed unnecessary fields.
+9. Created Month and Year columns.
+9. Verified numerical columns.
+10 Loaded the cleaned data into Power BI.
+   
+# Step 2 – Data Modeling
+
+After cleaning:
+1. Created relationships between tables (where applicable).
+2. Optimized the data model.
+3. Built reusable DAX measures.
+4. Applied appropriate formatting for currencies and percentages.
+   
+# Step 3 – KPIs Created
+
+The dashboard includes the following Key Performance Indicators:
+
+1. Total Loan Applications
+2. Total Funded Amount
+3. Total Amount Received
+4. Average Interest Rate
+5. Average Debt-to-Income Ratio (DTI)
+6. Good Loan Percentage
+7. Bad Loan Percentage
+8. Good Loan Applications
+9. Bad Loan Applications
+10. Good Loan Funded Amount
+11. Bad Loan Funded Amount
+12. Loan Recovery Amount
+13. Loan Status Analysis
+
+# Dashboard Walkthrough
+# Summary Dashboard
+
+This page provides a high-level overview of the bank's lending performance.
+
+# KPI Cards
+1. Total Loan Applications
+2. Total Funded Amount
+3. Total Amount Received
+4. Average Interest Rate
+5. Average DTI
+
+# Visualizations
+1. Good Loan vs Bad Loan Donut Charts
+2. Loan Status Performance Table
+3. Loan Status KPIs
+   
+# Key Findings
+1. 38.6K total loan applications.
+2. $435.8M total funded amount.
+3. $473M recovered from borrowers.
+4. 86.2% of loans are Good Loans.
+5. Only 13.8% are Bad Loans.
+6. Fully Paid loans generate the highest repayments.
+   
+# Overview Dashboard
+
+This page explores customer and loan characteristics.
+
+# Visualizations
+1. Loan Applications by State
+2. Loan Applications by Loan Term
+3. Loan Applications by Employment Length
+4. Loan Applications by Loan Purpose
+5. Loan Applications by Home Ownership
+   
+# Filters
+1. Measure Selector
+2. Good vs Bad Loan
+3. Grade
+4. State
+
+# Key Findings
+1. Most applications come from Rent and Mortgage homeowners.
+2. Debt Consolidation is the leading loan purpose.
+3. 36-month loans dominate the portfolio.
+4. Customers with over 10 years of employment submit the most applications.
+   
+# Details Dashboard
+
+This page provides transaction-level loan information.
+
+# Features
+1. Complete loan records.
+2. Interactive filtering.
+3. Drill-down capability.
+4. Detailed loan information.
+
+# Columns Included
+1. Loan ID
+2. Purpose
+3. Home Ownership
+4. Grade
+5. Sub-grade
+6. Funded Amount
+7. Interest Rate
+8. Issue Date
+9. Installment
+10. Amount Received
+
+This page enables detailed record-level analysis for auditing and investigation.
+
+# Key Business Insights
+# Loan Portfolio Performance
+1. The bank maintains a strong loan portfolio with 86.2% performing loans.
+2. Total repayments exceed the funded amount, indicating positive loan recovery.
+
+# Customer Behavior
+1. Debt Consolidation represents the largest borrowing category.
+2. Customers with longer employment histories are more likely to receive loans.
+3. Renters and mortgage holders account for most applications.
+
+# Lending Trends
+36-month loans are significantly more popular than 60-month loans.
+Loan demand varies across states, highlighting regional lending opportunities.
+
+# Risk Analysis
+Charged-off loans account for the majority of bad loans.
+Monitoring high-risk borrower segments can further reduce defaults.
+
+# Business Recommendations
+1. Strengthen credit risk assessment for applicants with higher default risk.
+2. Expand lending strategies in high-performing states.
+3. Promote loan products for underrepresented customer segments.
+4. Encourage shorter loan terms where appropriate to reduce risk.
+5. Continue monitoring loan purposes with higher default rates.
+6. Improve customer retention by offering repayment incentives for responsible borrowers.
+   
+# How to Use the Dashboard
+1. Open the Power BI report.
+2. Navigate between Summary, Overview, and Details pages.
+3. Use the slicers to filter by:
+    (i) Loan Grade
+    (ii) Loan Status
+    (iii) State
+    (iv) Loan Purpose
+4. Click on any visual to cross-filter the report.
+5. Analyze KPIs and trends to support business decisions.
+   
+# Repository Structure
+Bank-Loan-Dashboard/
+│
+├── Data/
+│   ├── Bank Loan Dataset.xlsx
+│
+├── Dashboard/
+│   ├── Bank Loan Dashboard.pbix
+│
+├── Images/
+│   ├── Summary Dashboard.png
+│   ├── Overview Dashboard.png
+│   ├── Details Dashboard.png
+│
+├── README.md
+└── LICENSE
+
+# Future Improvements
+1. Integrate real-time SQL database connectivity.
+2. Add predictive analytics for loan default risk.
+3. Build customer segmentation using machine learning.
+4. Implement row-level security for different user roles.
+5. Publish the dashboard to the Power BI Service with scheduled data refresh.
+
+# Author
+
+# Udeme Jackson
+
+# Role: Data Analyst | Business Intelligence Analyst
+
+# Skills Demonstrated
+1. Data Cleaning (Power Query)
+2. Data Modeling
+3. DAX Calculations
+4. Data Visualization
+5. Dashboard Design
+6. Business Intelligence
+7. Financial Analytics
+8. Storytelling with Data
+9. KPI Development
+10. Interactive Reporting
