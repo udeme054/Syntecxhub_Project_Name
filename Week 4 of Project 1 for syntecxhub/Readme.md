@@ -50,17 +50,17 @@ This dashboard addresses these challenges by providing a centralized reporting s
 # Dataset Description
 
 The dataset contains historical bank loan records including:
-1.Loan ID
-2.Loan Status
-3.Loan Purpose
-4.Home Ownership
-5.Grade
-6.Sub-grade
-7.Employment Length
-8.Loan Term
-9.State
-10.Funded Amount
-11.Amount Received
+1. Loan ID
+2. Loan Status
+3. Loan Purpose
+4. Home Ownership
+5. Grade
+6. Sub-grade
+7. Employment Length
+8. Loan Term
+9. State
+10. Funded Amount
+11. Amount Received
 12. Interest Rate
 13. Debt-to-Income (DTI)
 14. Installment
