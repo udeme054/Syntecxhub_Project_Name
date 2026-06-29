@@ -34,3 +34,42 @@ The objective of this project is to develop an interactive Power BI dashboard th
 4. Identify customer borrowing patterns.
 5. Monitor loan repayment status.
 6. Support data-driven lending decisions.
+
+# Business Problem
+
+Banks process thousands of loan applications every year. Without proper reporting, it becomes difficult to answer important business questions such as:
+1. How many loans have been issued?
+2. What percentage of loans are performing well?
+3. Which loan purposes generate the highest applications?
+4. Which states issue the most loans?
+5. What is the repayment performance?
+6. What customer groups are most likely to apply for loans?
+
+This dashboard addresses these challenges by providing a centralized reporting solution.
+
+# Dataset Description
+
+The dataset contains historical bank loan records including:
+1.Loan ID
+2.Loan Status
+3.Loan Purpose
+4.Home Ownership
+5.Grade
+6.Sub-grade
+7.Employment Length
+8.Loan Term
+9.State
+10.Funded Amount
+11.Amount Received
+12. Interest Rate
+13. Debt-to-Income (DTI)
+14. Installment
+15. Issue Date
+
+# Tools & Technologies
+1. Microsoft Excel (Data Source)
+2. Power Query (Data Cleaning & Transformation)
+3. Power BI Desktop
+4. DAX (Data Analysis Expressions)
+5. Data Modeling
+6. Interactive Visualizations
