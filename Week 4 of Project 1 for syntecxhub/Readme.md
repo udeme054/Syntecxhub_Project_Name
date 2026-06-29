@@ -261,9 +261,7 @@ Bank-Loan-Dashboard/
 
 
 
-# Author
-
-# Udeme Jackson
+# Author: Udeme Jackson
 
 # Role: Data Analyst | Business Intelligence Analyst
 
