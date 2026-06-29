@@ -248,6 +248,13 @@ Bank-Loan-Dashboard/
 4. Implement row-level security for different user roles.
 5. Publish the dashboard to the Power BI Service with scheduled data refresh.
 
+# Photo gallery
+# Summary of Bank Load dashboard
+![Alt text](https://github.com/udeme054/Syntecxhub_Project_Name/blob/683ec23eedabe1cbf5c7a3001ba8ca915ec701b2/Week%204%20of%20Project%201%20for%20syntecxhub/Summary%20of%20Bank%20Loan%20report.jpg)
+
+
+
+
 # Author
 
 # Udeme Jackson
