@@ -9,7 +9,7 @@ This project consists of three interactive dashboard pages:
 2. Overview Dashboard – Customer demographics and lending patterns.
 3. Details Dashboard – Transaction-level loan records for detailed analysis.
 
-##📖 Table of Contents
+📖 Table of Contents
 1. Project Objective
 2. Business Problem
 3. Dataset Description
