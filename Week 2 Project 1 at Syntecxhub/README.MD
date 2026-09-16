@@ -1,4 +1,24 @@
 # Customer Segmentation Using RFM Analysis (Project 1 - Week 2)
+# Table of Contents
+[Project Overview]
+[Business Objectives]
+[Business Problem]
+[Dataset Description]
+[Tools & Technologies]
+[Data Cleaning & Preparation]
+[Data Modeling]
+[DAX Measures Used]
+[Key Performance Indicators]
+[Dashboard Overview]
+[Visualization Created]
+[Key findings]
+[Business Insights]
+ 1. [customer demographics]
+ 2. [customer segmentation]
+[Strategic Recommendation]
+[Skills Demonstrated]
+[Conclusion]
+[Author]
 
 ##  Project Overview
 This project focuses on data-driven customer segmentation utilizing the RFM (Recency, Frequency, Monetary) Analysis 
