@@ -1,7 +1,7 @@
 # Customer Segmentation Using RFM Analysis (Project 1 - Week 2)
 # Table of Contents
-1.[Project Overview]
-2.[Business Objectives]
+1. [Project Overview]
+2. [Business Objectives]
 3.[Business Problem]
 4.[Dataset Description]
 [Tools & Technologies]
