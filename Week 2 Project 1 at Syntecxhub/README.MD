@@ -3,7 +3,7 @@
 ##  Project Overview
 This project focuses on data-driven customer segmentation utilizing the RFM (Recency, Frequency, Monetary) Analysis 
 framework built in Power BI. By analyzing customer purchasing behavior, this interactive dashboard categorizes an e-commerce customer base 
-of 18,484 unique customers into distinct behavioral segments. 
+of 18,484 unique customers into distinct behavioral segments.
 
 The primary objective is to empower marketing teams to replace generic campaigns with targeted, high-impact strategies, optimize resource 
 allocation, and maximize Customer Lifetime Value (CLV).
