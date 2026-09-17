@@ -25,12 +25,16 @@ This project uses Microsoft Power BI to analyze customer demographics, purchasin
 The dashboards provide an interactive view of 18,484 customers and $29.36M in total sales, helping identify valuable, loyal, new, and at-risk customer groups.
 
 ## Business Objectives
-* Analyze customer demographics and purchasing patterns.
-* Measure overall sales and customer performance.
-* Segment customers based on RFM behavior.
-* Identify high-value and at-risk customers.
-* Understand revenue contribution by customer segment.
-* Support targeted marketing and customer-retention decisions
+The main objectives of this project were to:
+* Analyze customer demographics and sales performance.
+* Understand customer purchasing behavior.
+* Identify different customer segments using RFM analysis.
+* Identify high-value and loyal customers.
+* Identify customers requiring retention or re-engagement.
+* Analyze sales contribution across customer segments.
+* Understand sales distribution by age, gender, marital status, and country.
+* Develop an interactive Power BI dashboard for business users.
+* Generate actionable recommendations from data
 
 ## Key Performance Indicators (KPIs) & Dashboard Structure
 
