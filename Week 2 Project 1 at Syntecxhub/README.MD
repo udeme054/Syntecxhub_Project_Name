@@ -21,8 +21,10 @@
 * [Author]
 
 ##  Project Overview
-This project uses Microsoft Power BI to analyze customer demographics, purchasing behavior, and customer value through RFM (Recency, Frequency, Monetary) analysis.
-The dashboards provide an interactive view of 18,484 customers and $29.36M in total sales, helping identify valuable, loyal, new, and at-risk customer groups.
+This project is an interactive customer analytics dashboard developed in Microsoft Power BI to analyze customer demographics, sales performance, and purchasing behavior.
+The project combines Customer Demographics analysis with RFM (Recency, Frequency, Monetary) Customer Segmentation to provide a clearer understanding of the customer base and identify different customer-value groups. 
+The dashboards contain 18,484 customers and approximately $29.36M in total sales.
+The RFM dashboard analyzes customer groups including Champions, Loyal, Potential Loyalists, Promising, At Risk, Cannot Lose Them, New Customers, Hibernating Customers, Need Attention, About To Sleep, and Lost Customers.
 
 ## Business Objectives
 The main objectives of this project were to:
