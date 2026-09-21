@@ -2,7 +2,8 @@
 # Table of Contents
 * [Project Overview]
 * [Business Objectives]
-* [Business Problem]
+* [Business Problems]
+* [Business Questions]
 * [Dataset Description]
 * [Tools & Technologies]
 * [Data Cleaning & Preparation]
@@ -13,8 +14,6 @@
 * [Visualization Created]
 * [Key findings]
 * [Business Insights]
-   1. [customer demographics]
-   2. [customer segmentation]
 * [Strategic Recommendation]
 * [Skills Demonstrated]
 * [Conclusion]
