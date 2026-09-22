@@ -115,46 +115,191 @@ Switch(
 
 11. RFM Scores = 'RFM Table'[Recency Scores] & 'RFM Table'[Frequency Scores] & 'RFM Table'[Monetary Scores]
 
+1. TOTAL SALES
+Total Sales =
+SUM(FactInternetSales[SalesAmount])
 
-// ============================================
-// POWER QUERY DATA PREPARATION
-// ============================================
+2. NUMBER OF CUSTOMERS
+Nos of Customers =
+DISTINCTCOUNT('Customer_Data'[CustomerKey])
 
-// FactInternetSales
-let
-    Source = Excel.Workbook(
-        File.Contents("AdventureWorks.xlsx"),
-        null,
-        true
+3. FREQUENCY VALUE
+Frequency Value =
+DISTINCTCOUNT(
+    'FactInternetSales'[SalesOrderLineNumber])
+
+
+-- ============================================
+-- 4. LAST TRANSACTION DATE
+-- ============================================
+
+Last Transaction Date =
+MAXX(
+    FILTER(
+        FactInternetSales,
+        FactInternetSales[CustomerKey]
+            = FactInternetSales[CustomerKey]
     ),
+    FactInternetSales[OrderDate]
+)
 
-    FactInternetSales =
-        Source{[Item="FactInternetSales"]}[Data],
 
-    PromotedHeaders =
-        Table.PromoteHeaders(
-            FactInternetSales,
-            [PromoteAllScalars=true]
-        ),
+-- ============================================
+-- 5. MONETARY VALUE
+-- ============================================
 
-    ChangedTypes =
-        Table.TransformColumnTypes(
-            PromotedHeaders,
-            {
-                {"CustomerKey", Int64.Type},
-                {"SalesAmount", type number},
-                {"OrderDate", type date}
-            }
-        ),
+Monetary Value =
+CALCULATE(
+    SUM(FactInternetSales[SalesAmount]),
+    ALLEXCEPT(
+        FactInternetSales,
+        FactInternetSales[CustomerKey]
+    )
+)
 
-    RemovedDuplicates =
-        Table.Distinct(
-            ChangedTypes
-        )
 
-in
-    RemovedDuplicates
+-- ============================================
+-- 6. RECENCY VALUE
+-- ============================================
 
+Recency Value =
+DATEDIFF(
+    [Last Transaction Date],
+    TODAY(),
+    DAY
+)
+
+
+-- ============================================
+-- 7. RFM TABLE
+-- ============================================
+
+RFM Table =
+SUMMARIZE(
+    'FactInternetSales',
+    'FactInternetSales'[CustomerKey],
+    "Recency Value", [Recency Value],
+    "Frequency Value", [Frequency Value],
+    "Monetary Value", [Monetary Value]
+)
+
+
+-- ============================================
+-- 8. RECENCY SCORE
+-- ============================================
+
+Recency Scores =
+SWITCH(
+    TRUE(),
+
+    [Recency Value]
+        <= PERCENTILE.INC(
+            'RFM Table'[Recency Value],
+            0.20
+        ), 5,
+
+    [Recency Value]
+        <= PERCENTILE.INC(
+            'RFM Table'[Recency Value],
+            0.40
+        ), 4,
+
+    [Recency Value]
+        <= PERCENTILE.INC(
+            'RFM Table'[Recency Value],
+            0.60
+        ), 3,
+
+    [Recency Value]
+        <= PERCENTILE.INC(
+            'RFM Table'[Recency Value],
+            0.80
+        ), 2,
+
+    1
+)
+
+
+-- ============================================
+-- 9. FREQUENCY SCORE
+-- ============================================
+
+Frequency Scores =
+SWITCH(
+    TRUE(),
+
+    [Frequency Value]
+        <= PERCENTILE.INC(
+            'RFM Table'[Frequency Value],
+            0.20
+        ), 1,
+
+    [Frequency Value]
+        <= PERCENTILE.INC(
+            'RFM Table'[Frequency Value],
+            0.40
+        ), 2,
+
+    [Frequency Value]
+        <= PERCENTILE.INC(
+            'RFM Table'[Frequency Value],
+            0.60
+        ), 3,
+
+    [Frequency Value]
+        <= PERCENTILE.INC(
+            'RFM Table'[Frequency Value],
+            0.80
+        ), 4,
+
+    5
+)
+
+
+-- ============================================
+-- 10. MONETARY SCORE
+-- ============================================
+
+Monetary Scores =
+SWITCH(
+    TRUE(),
+
+    [Monetary Value]
+        <= PERCENTILE.INC(
+            'RFM Table'[Monetary Value],
+            0.20
+        ), 1,
+
+    [Monetary Value]
+        <= PERCENTILE.INC(
+            'RFM Table'[Monetary Value],
+            0.40
+        ), 2,
+
+    [Monetary Value]
+        <= PERCENTILE.INC(
+            'RFM Table'[Monetary Value],
+            0.60
+        ), 3,
+
+    [Monetary Value]
+        <= PERCENTILE.INC(
+            'RFM Table'[Monetary Value],
+            0.80
+        ), 4,
+
+    5
+)
+
+
+-- ============================================
+-- 11. RFM SCORE
+-- ============================================
+
+RFM Scores =
+'RFM Table'[Recency Scores]
+    & 'RFM Table'[Frequency Scores]
+    & 'RFM Table'[Monetary Scores]
 
 
 
