@@ -64,6 +64,7 @@ Key metrics:
 * DAX (Data Analysis Expressions): Used to construct calculated columns and measures for RFM scoring, customer counts, and ranking.
 * Data visualization and Modeling
 * GitHub | Linkedln (Project Documentation)
+* Data Source: Structured E-commerce Datasets (Excel/SQL Server)
 
 ## Data Cleaning and preparation
 Data preparation was performed using Power Query, including:
@@ -88,54 +89,81 @@ The model enables analysis across:
 Relationships were configured to allow customer-level filtering and drill-down across the dashboard.
 
 ## DAX Measures
-1.  CORE KPI MEASURES
-* Total Sales = SUM(FactInternetSales[SalesAmount])
+### 1. Core KPI Measures
+```dax
+Total Sales = 
+SUM(FactInternetSales[SalesAmount])
 
-* Nos of Customers = DISTINCTCOUNT('Customer_Data'[CustomerKey])
+Nos of Customers = 
+DISTINCTCOUNT('Customer_Data'[CustomerKey])
+```
+### 2. RFM Measures
+```dax
+Frequency value = 
+DISTINCTCOUNT('FactInternetSales'[SalesOrderLineNumber])
 
-2. RFM MEASURES
-* Frequency value = DISTINCTCOUNT('FactInternetSales'[SalesOrderLineNumber])
+Monetary value = 
+CALCULATE(
+    SUM(FactInternetSales[SalesAmount]),
+    ALLEXCEPT('FactInternetSales', 'FactInternetSales'[CustomerKey])
+)
 
-* Monetary value = 
-Calculate(
-SUM(FactInternetSales[SalesAmount]),
-ALLEXCEPT('FactInternetSales','FactInternetSales'[CustomerKey]
-))
-
-* Recency Value = DATEDIFF([Last_transaction date],TODAY(),DAY)
-
-3. RFM Scores
-* Recency Scores = 
-Switch(
-    True(),
+Recency Value = 
+DATEDIFF([Last_transaction date], TODAY(), DAY)
+```
+### 3. RFM Scores
+```dax
+Recency Scores = 
+SWITCH(
+    TRUE(),
     [Recency Value] <= PERCENTILE.INC('RFM Table'[Recency Value], 0.20), 5,
     [Recency Value] <= PERCENTILE.INC('RFM Table'[Recency Value], 0.40), 4,
     [Recency Value] <= PERCENTILE.INC('RFM Table'[Recency Value], 0.60), 3,
-    [Recency Value] <= PERCENTILE.INC('RFM Table'[Recency Value], 0.80), 2,  1
+    [Recency Value] <= PERCENTILE.INC('RFM Table'[Recency Value], 0.80), 2,
+    1
 )
 
-* Frequency Scores = 
-Switch(
-    True(),
+Frequency Scores = 
+SWITCH(
+    TRUE(),
     [Frequency value] <= PERCENTILE.INC('RFM Table'[Frequency value], 0.20), 1,
     [Frequency value] <= PERCENTILE.INC('RFM Table'[Frequency value], 0.40), 2,
     [Frequency value] <= PERCENTILE.INC('RFM Table'[Frequency value], 0.60), 3,
-    [Frequency value] <= PERCENTILE.INC('RFM Table'[Frequency value], 0.80), 4,  5)
+    [Frequency value] <= PERCENTILE.INC('RFM Table'[Frequency value], 0.80), 4,
+    5
+)
 
-* Monetary Scores = 
-Switch(
-    True(),
+Monetary Scores = 
+SWITCH(
+    TRUE(),
     [Monetary value] <= PERCENTILE.INC('RFM Table'[Monetary value], 0.20), 1,
     [Monetary value] <= PERCENTILE.INC('RFM Table'[Monetary value], 0.40), 2,
     [Monetary value] <= PERCENTILE.INC('RFM Table'[Monetary value], 0.60), 3,
-    [Monetary value] <= PERCENTILE.INC('RFM Table'[Monetary value], 0.80), 4,  5)
+    [Monetary value] <= PERCENTILE.INC('RFM Table'[Monetary value], 0.80), 4,
+    5
+)
 
-* RFM Scores = 'RFM Table'[Recency Scores] & 'RFM Table'[Frequency Scores] & 'RFM Table'[Monetary Scores]
-4. RFM Table
-* RFM Table = SUMMARIZE('FactInternetSales','FactInternetSales'[CustomerKey],"Recency Value",[Recency Value],"Frequency value",[Frequency value],"Monetary value",[Monetary value])
+RFM Scores = 
+'RFM Table'[Recency Scores] & 'RFM Table'[Frequency Scores] & 'RFM Table'[Monetary Scores]
+```
 
-* Last_transaction date = 
-Maxx(FILTER(FactInternetSales, FactInternetSales[CustomerKey] = FactInternetSales[CustomerKey]),FactInternetSales[OrderDate])
+### 4. RFM Table & Calculated Columns
+```dax
+RFM Table = 
+SUMMARIZE(
+    'FactInternetSales',
+    'FactInternetSales'[CustomerKey],
+    "Recency Value", [Recency Value],
+    "Frequency value", [Frequency value],
+    "Monetary value", [Monetary value]
+)
+
+Last_transaction date = 
+MAXX(
+    FILTER(FactInternetSales, FactInternetSales[CustomerKey] = FactInternetSales[CustomerKey]),
+    FactInternetSales[OrderDate]
+)
+```
 
 ## Key Performance Indicators (KPIs)
 * Total Customers:	18,484
@@ -231,7 +259,7 @@ The dashboard links each segment to an appropriate marketing direction.
 * At Risk, About To Sleep, Hibernating, and Lost Customers indicate declining engagement and retention opportunities.
 * New Customers, Promising, and Potential Loyalists provide opportunities for developing stronger long-term relationships.
 * Different segments require different actions, ranging from loyalty rewards and retention to reactivation and win-back campaigns.
-*The Customer Details page identifies the individual customers behind each segment, enabling more precise targeting.
+* The Customer Details page identifies the individual customers behind each segment, enabling more precise targeting.
 
 ## Business Insights 
 
@@ -277,14 +305,11 @@ Technical Skills: Excel | SQL | Power BI | Power Query | DAX
 
 Passionate about transforming raw data into meaningful insights, interactive dashboards, and actionable business recommendations.
 
----
-
-##  Tech Stack & Tools Used
-Data Visualization & Modeling: Power BI Desktop
-DAX (Data Analysis Expressions): Used to construct calculated columns and measures for RFM scoring, customer counts, and ranking.
-Data Source: Structured E-commerce Datasets (Excel/SQL Server)
 
 ![alt text](https://github.com/udeme054/Syntecxhub_Project_Name/blob/d81d8959ee3e26a350e3622faef32b5217dc009b/Customer%20Profile%20page%201.jpg)
 ![alt text](https://github.com/udeme054/Syntecxhub_Project_Name/blob/f87655ae13cea326eed866e2f7c4de2f8294f17b/Customer%20Segmentation%20page%202.jpg)
 ![alt text](https://github.com/udeme054/Syntecxhub_Project_Name/blob/325a80b1f86ca207dad227365be1a10a88caae5f/Customer%20details%20page%203.jpg)
 ![alt text](https://github.com/udeme054/Syntecxhub_Project_Name/blob/391ca3e2f32561ef3028d0ac9f0c3138dda6c5ac/RFM%20ANALYSIS%20AND%20MARKETING%20ACTIONS.jpg)
+
+
+
