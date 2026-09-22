@@ -20,50 +20,58 @@
 * [Author]
 
 ##  Project Overview
-This project is an interactive customer analytics dashboard developed in Microsoft Power BI to analyze customer demographics, sales performance, and purchasing behavior.
-The project combines Customer Demographics analysis with RFM (Recency, Frequency, Monetary) Customer Segmentation to provide a clearer understanding of the customer base and identify different customer-value groups. 
-The dashboards contain 18,484 customers and approximately $29.36M in total sales.
-The RFM dashboard analyzes customer groups including Champions, Loyal, Potential Loyalists, Promising, At Risk, Cannot Lose Them, New Customers, Hibernating Customers, Need Attention, About To Sleep, and Lost Customers.
+An interactive Power BI Customer Analytics Dashboard designed to analyze customer demographics, purchasing behavior, customer value, RFM segmentation, and marketing opportunities.
+
+The project combines four analytical views:
+Customer Demographics → Customer Segmentation → RFM Marketing Actions → Customer Details
+The analysis covers 18,484 customers across 6 countries and 11 customer segments, providing a complete view from understanding customers to identifying appropriate business actions..
 
 ## Business Objectives
-The main objectives of this project were to:
-* Analyze customer demographics and sales performance.
-* Understand customer purchasing behavior.
-* Identify different customer segments using RFM analysis.
-* Identify high-value and loyal customers.
-* Identify customers requiring retention or re-engagement.
-* Analyze sales contribution across customer segments.
-* Understand sales distribution by age, gender, marital status, and country.
-* Develop an interactive Power BI dashboard for business users.
-* Generate actionable recommendations from data
+* Understand customer demographic and geographic characteristics.
+* Measure customer sales and purchasing behavior.
+* Identify valuable, loyal, at-risk, and inactive customers.
+* Segment customers using Recency, Frequency, and Monetary (RFM) analysis.
+* Define appropriate marketing actions for different customer segments.
+* Enable customer-level investigation for targeted decision-making.
 
-## Key Performance Indicators (KPIs) & Dashboard Structure
+## Business Problems
+The business needs to understand who its customers are, how they behave, how valuable they are, and which customers require attention.
 
-The analytics solution is divided into interactive dashboard pages, referencing specific design files:
-Total Sales Performance: $29.36M across the entire ecosystem.
-Customer Profiles: Tracks primary demographic attributes including:
-Gender Distribution: Balanced engagement with 50.46% Male and 49.54% Female shoppers.
-Marital Status: 51.73% Single vs. 48.27% Married.
-Age Cohorts: Highlights a massive revenue peak of $11.5M concentrated in the 55–64 age band, followed by $8.1M in the 65–74 group.
-Geographic Sales Map: A visual map breakdown of sales distribution by country.
-Customer Segmentation Matrix: Segments the customer volume against actual monetary contribution, profiling behavioral metrics across Recency, Frequency, and Monetary scores.
-Granular Customer Details: An operational data sheet mapping individual customer IDs, names, email addresses, cities, and sales histories to their precise RFM segment for direct marketing exports.
-Marketing Action Index: A strategic dictionary defining each customer segment and prescribing automated business interventions.
+Without customer segmentation, marketing efforts may be too broad and fail to address the different needs of high-value, loyal, emerging, at-risk, and inactive customers.
 
-##  Core Business Insights
+## Business Questions
+* Who are our customers and where are they located?
+* Which customer groups generate the most value?
+* Which customers are loyal, at risk, or becoming inactive?
+* Which customers represent future growth opportunities?
+* What marketing action is appropriate for each segment?
+* Who are the individual customers within each segment?
 
-The "Promising" Revenue Driver: The "New Customers" and "Promising" cohorts hold the highest volume of unique buyers (~2.6K and ~2.5K respectively). Crucially, the "Promising" segment contributes the single highest revenue block at $6.5M, proving they are ripe for upselling.
-Vulnerable Revenue At Risk: High-value customers categorized under "Cannot Lose Them" and "At Risk" represent a combined $11.2M in historical sales. These segments have high monetary scores but are experiencing severe recency drop-offs, signaling a critical risk of imminent churn.
-Demographic Super-Group: Mature adults aged *55 to 74 generate nearly $20M* of the company’s total $29.36M sales revenue, identifying them as the business's most vital customer persona.
+## Datasets
+The analysis uses customer, transaction, sales, product, demographic, geographic, and RFM data.
 
-##  Core DAX Measures & Formulas Used
+Key metrics:
+* 18,484 Customers
+* 11 Customer Segments
+* 6 Countries
+* $29.36M Total Sales
+Key fields include Customer Number, Age, Gender, Marital Status, City, Country, Product, Sales, Order Date, and Customer Segment.
 
-To build the dynamic segmentation and calculate the RFM scores, the following key DAX formulas and measures were implemented in the data model:
+## Data Cleaning
+Data preparation was performed using Power Query, including:
 
-### 1. Base Performance Measures
-These drive the high-level KPIs on the executive summary page.
-  Total Sales:
-  Total Sales = SUM('Sales_Data'[SalesAmount])
+* Removing duplicates and reviewing missing values.
+* Correcting data types and standardizing fields.
+* Preparing demographic and geographic attributes.
+* Creating/validating age bands.
+* Preparing transaction data for RFM analysis.
+* Validating relationships and analytical fields.
+
+## DAX Measures
+Total Sales =
+SUM(FactInternetSales[SalesAmount])
+
+
     
   Total Customers
   Nos of Customers = DISTINCTCOUNT('Customer_Data'[CustomerKey])
