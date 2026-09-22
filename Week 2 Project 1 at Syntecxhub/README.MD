@@ -116,6 +116,48 @@ Switch(
 11. RFM Scores = 'RFM Table'[Recency Scores] & 'RFM Table'[Frequency Scores] & 'RFM Table'[Monetary Scores]
 
 
+// ============================================
+// POWER QUERY DATA PREPARATION
+// ============================================
+
+// FactInternetSales
+let
+    Source = Excel.Workbook(
+        File.Contents("AdventureWorks.xlsx"),
+        null,
+        true
+    ),
+
+    FactInternetSales =
+        Source{[Item="FactInternetSales"]}[Data],
+
+    PromotedHeaders =
+        Table.PromoteHeaders(
+            FactInternetSales,
+            [PromoteAllScalars=true]
+        ),
+
+    ChangedTypes =
+        Table.TransformColumnTypes(
+            PromotedHeaders,
+            {
+                {"CustomerKey", Int64.Type},
+                {"SalesAmount", type number},
+                {"OrderDate", type date}
+            }
+        ),
+
+    RemovedDuplicates =
+        Table.Distinct(
+            ChangedTypes
+        )
+
+in
+    RemovedDuplicates
+
+
+
+
 ## Strategic Marketing Recommendations
 
 Based on the behavioral findings in the RFM matrix, the following actions are recommended for the business:
