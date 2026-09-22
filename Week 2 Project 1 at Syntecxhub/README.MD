@@ -148,9 +148,7 @@ The dashboard includes:
 
 ## Dashboard Overview
 
-👥 Customer Demographics
-
-Analyzes customers by age, age band, gender, marital status, country, city, and sales.
+👥 Customer Demographics: Analyzes customers by age, age band, gender, marital status, country, city, and sales.
 
 * Key Finding
 The dashboard provides a clear profile of the customer base and shows how sales vary across demographic and geographic groups.
@@ -165,11 +163,11 @@ Customers are classified into 11 RFM-based segments, including:
 
 Champions, Loyal, Cannot Lose Them, At Risk, About To Sleep, Hibernating Customers, Lost Customers, Need Attention, New Customers, Potential Loyalist, and Promising.
 
-Key Finding
+* Key Finding
 
 Customers demonstrate different levels of engagement, purchasing frequency, and monetary value.
 
-Business Insight:
+* Business Insight:
 The customer base should be managed using segment-specific strategies rather than a one-size-fits-all approach.
 
 👤 Customer Details
@@ -186,13 +184,12 @@ The Customer Details page provides customer-level information including:
 * Customer Segment
 
 * Key Finding
-
 The page connects segment-level analysis to individual customers.
 
-Business Insight:
+* Business Insight:
 Stakeholders can identify exactly which customers require retention, loyalty, re-engagement, or development actions.
 
-🔎 RFM Analysis & Marketing Actions
+## RFM Analysis & Marketing Actions
 
 RFM analysis evaluates customers using:
 
@@ -202,7 +199,7 @@ RFM analysis evaluates customers using:
 
 The dashboard links each segment to an appropriate marketing direction.
 
-#Customer Group	                        #Marketing Direction
+#Customer Group	                         Marketing Direction
 Champions	                            Reward and retain
 Loyal	                                Strengthen loyalty
 Cannot Lose Them	                    Prioritize retention
