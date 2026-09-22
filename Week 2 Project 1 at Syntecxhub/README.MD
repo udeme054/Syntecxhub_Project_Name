@@ -7,11 +7,10 @@
 * [Dataset Description]
 * [Tools & Technologies]
 * [Data Cleaning & Preparation]
-* [Data Modeling]
 * [DAX Measures Used]
 * [Key Performance Indicators]
-* [Dashboard Overview]
 * [Visualization Created]
+* [Dashboard Overview]
 * [Key findings]
 * [Business Insights]
 * [Strategic Recommendation]
@@ -47,7 +46,7 @@ Without customer segmentation, marketing efforts may be too broad and fail to ad
 * What marketing action is appropriate for each segment?
 * Who are the individual customers within each segment?
 
-## Datasets
+## Dataset Description
 The analysis uses customer, transaction, sales, product, demographic, geographic, and RFM data.
 
 Key metrics:
@@ -58,7 +57,7 @@ Key metrics:
 
 * Key fields include Customer Number, Age, Gender, Marital Status, City, Country, Product, Sales, Order Date, and Customer Segment.
 
-## Data Cleaning
+## Data Cleaning and preparation
 Data preparation was performed using Power Query, including:
 
 * Removing duplicates and reviewing missing values.
@@ -69,26 +68,24 @@ Data preparation was performed using Power Query, including:
 * Validating relationships and analytical fields.
 
 ## DAX Measures
-1. Total Sales = SUM(FactInternetSales[SalesAmount])
+1.  CORE KPI MEASURES
+* Total Sales = SUM(FactInternetSales[SalesAmount])
 
-2. Nos of Customers = DISTINCTCOUNT('Customer_Data'[CustomerKey])
+* Nos of Customers = DISTINCTCOUNT('Customer_Data'[CustomerKey])
 
-3. Frequency value = DISTINCTCOUNT('FactInternetSales'[SalesOrderLineNumber])
+2. RFM MEASURES
+* Frequency value = DISTINCTCOUNT('FactInternetSales'[SalesOrderLineNumber])
 
-4. Last_transaction date = 
-Maxx(FILTER(FactInternetSales, FactInternetSales[CustomerKey] = FactInternetSales[CustomerKey]),FactInternetSales[OrderDate])
-
-5. Monetary value = 
+* Monetary value = 
 Calculate(
 SUM(FactInternetSales[SalesAmount]),
 ALLEXCEPT('FactInternetSales','FactInternetSales'[CustomerKey]
 ))
 
-6. Recency Value = DATEDIFF([Last_transaction date],TODAY(),DAY)
+* Recency Value = DATEDIFF([Last_transaction date],TODAY(),DAY)
 
-7. RFM Table = SUMMARIZE('FactInternetSales','FactInternetSales'[CustomerKey],"Recency Value",[Recency Value],"Frequency value",[Frequency value],"Monetary value",[Monetary value])
-
-8. Recency Scores = 
+3. RFM Scores
+* Recency Scores = 
 Switch(
     True(),
     [Recency Value] <= PERCENTILE.INC('RFM Table'[Recency Value], 0.20), 5,
@@ -97,7 +94,7 @@ Switch(
     [Recency Value] <= PERCENTILE.INC('RFM Table'[Recency Value], 0.80), 2,  1
 )
 
-9. Frequency Scores = 
+* Frequency Scores = 
 Switch(
     True(),
     [Frequency value] <= PERCENTILE.INC('RFM Table'[Frequency value], 0.20), 1,
@@ -105,7 +102,7 @@ Switch(
     [Frequency value] <= PERCENTILE.INC('RFM Table'[Frequency value], 0.60), 3,
     [Frequency value] <= PERCENTILE.INC('RFM Table'[Frequency value], 0.80), 4,  5)
 
-10. Monetary Scores = 
+* Monetary Scores = 
 Switch(
     True(),
     [Monetary value] <= PERCENTILE.INC('RFM Table'[Monetary value], 0.20), 1,
@@ -113,194 +110,41 @@ Switch(
     [Monetary value] <= PERCENTILE.INC('RFM Table'[Monetary value], 0.60), 3,
     [Monetary value] <= PERCENTILE.INC('RFM Table'[Monetary value], 0.80), 4,  5)
 
-11. RFM Scores = 'RFM Table'[Recency Scores] & 'RFM Table'[Frequency Scores] & 'RFM Table'[Monetary Scores]
+* RFM Scores = 'RFM Table'[Recency Scores] & 'RFM Table'[Frequency Scores] & 'RFM Table'[Monetary Scores]
+4. RFM Table
+* RFM Table = SUMMARIZE('FactInternetSales','FactInternetSales'[CustomerKey],"Recency Value",[Recency Value],"Frequency value",[Frequency value],"Monetary value",[Monetary value])
 
-1. TOTAL SALES
-Total Sales =
-SUM(FactInternetSales[SalesAmount])
+Last_transaction date = 
+Maxx(FILTER(FactInternetSales, FactInternetSales[CustomerKey] = FactInternetSales[CustomerKey]),FactInternetSales[OrderDate])
 
-2. NUMBER OF CUSTOMERS
-Nos of Customers =
-DISTINCTCOUNT('Customer_Data'[CustomerKey])
+## Key Performance Indicators (KPIs)
+* Total Customers:	18,484
+* Total Sales:	    $29.36M
 
-3. FREQUENCY VALUE
-Frequency Value =
-DISTINCTCOUNT(
-    'FactInternetSales'[SalesOrderLineNumber])
+## Visualization Created
 
+The dashboard includes:
+KPI Cards
+Bar & Column Charts
+Donut Charts
+Geographic Map
+RFM Segment Analysis
+Customer Detail Table
+Slicers & Filters
+Interactive Drill-downs
 
--- ============================================
--- 4. LAST TRANSACTION DATE
--- ============================================
+## Dashboard Overview
 
-Last Transaction Date =
-MAXX(
-    FILTER(
-        FactInternetSales,
-        FactInternetSales[CustomerKey]
-            = FactInternetSales[CustomerKey]
-    ),
-    FactInternetSales[OrderDate]
-)
+👥 Customer Demographics
 
+Analyzes customers by age, age band, gender, marital status, country, city, and sales.
 
--- ============================================
--- 5. MONETARY VALUE
--- ============================================
+Key Finding
 
-Monetary Value =
-CALCULATE(
-    SUM(FactInternetSales[SalesAmount]),
-    ALLEXCEPT(
-        FactInternetSales,
-        FactInternetSales[CustomerKey]
-    )
-)
+The dashboard provides a clear profile of the customer base and shows how sales vary across demographic and geographic groups.
 
-
--- ============================================
--- 6. RECENCY VALUE
--- ============================================
-
-Recency Value =
-DATEDIFF(
-    [Last Transaction Date],
-    TODAY(),
-    DAY
-)
-
-
--- ============================================
--- 7. RFM TABLE
--- ============================================
-
-RFM Table =
-SUMMARIZE(
-    'FactInternetSales',
-    'FactInternetSales'[CustomerKey],
-    "Recency Value", [Recency Value],
-    "Frequency Value", [Frequency Value],
-    "Monetary Value", [Monetary Value]
-)
-
-
--- ============================================
--- 8. RECENCY SCORE
--- ============================================
-
-Recency Scores =
-SWITCH(
-    TRUE(),
-
-    [Recency Value]
-        <= PERCENTILE.INC(
-            'RFM Table'[Recency Value],
-            0.20
-        ), 5,
-
-    [Recency Value]
-        <= PERCENTILE.INC(
-            'RFM Table'[Recency Value],
-            0.40
-        ), 4,
-
-    [Recency Value]
-        <= PERCENTILE.INC(
-            'RFM Table'[Recency Value],
-            0.60
-        ), 3,
-
-    [Recency Value]
-        <= PERCENTILE.INC(
-            'RFM Table'[Recency Value],
-            0.80
-        ), 2,
-
-    1
-)
-
-
--- ============================================
--- 9. FREQUENCY SCORE
--- ============================================
-
-Frequency Scores =
-SWITCH(
-    TRUE(),
-
-    [Frequency Value]
-        <= PERCENTILE.INC(
-            'RFM Table'[Frequency Value],
-            0.20
-        ), 1,
-
-    [Frequency Value]
-        <= PERCENTILE.INC(
-            'RFM Table'[Frequency Value],
-            0.40
-        ), 2,
-
-    [Frequency Value]
-        <= PERCENTILE.INC(
-            'RFM Table'[Frequency Value],
-            0.60
-        ), 3,
-
-    [Frequency Value]
-        <= PERCENTILE.INC(
-            'RFM Table'[Frequency Value],
-            0.80
-        ), 4,
-
-    5
-)
-
-
--- ============================================
--- 10. MONETARY SCORE
--- ============================================
-
-Monetary Scores =
-SWITCH(
-    TRUE(),
-
-    [Monetary Value]
-        <= PERCENTILE.INC(
-            'RFM Table'[Monetary Value],
-            0.20
-        ), 1,
-
-    [Monetary Value]
-        <= PERCENTILE.INC(
-            'RFM Table'[Monetary Value],
-            0.40
-        ), 2,
-
-    [Monetary Value]
-        <= PERCENTILE.INC(
-            'RFM Table'[Monetary Value],
-            0.60
-        ), 3,
-
-    [Monetary Value]
-        <= PERCENTILE.INC(
-            'RFM Table'[Monetary Value],
-            0.80
-        ), 4,
-
-    5
-)
-
-
--- ============================================
--- 11. RFM SCORE
--- ============================================
-
-RFM Scores =
-'RFM Table'[Recency Scores]
-    & 'RFM Table'[Frequency Scores]
-    & 'RFM Table'[Monetary Scores]
-
+Business Insight:
+Customer characteristics and location provide useful context for targeted marketing and customer engagement rather than applying a single strategy to the entire customer base.
 
 
 ## Strategic Marketing Recommendations
