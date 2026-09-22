@@ -124,14 +124,14 @@ Maxx(FILTER(FactInternetSales, FactInternetSales[CustomerKey] = FactInternetSale
 ## Visualization Created
 
 The dashboard includes:
-KPI Cards
-Bar & Column Charts
-Donut Charts
-Geographic Map
-RFM Segment Analysis
-Customer Detail Table
-Slicers & Filters
-Interactive Drill-downs
+* KPI Cards
+* Bar & Column Charts
+* Donut Charts
+* Geographic Map
+* RFM Segment Analysis
+* Customer Detail Table
+* Slicers & Filters
+* Interactive Drill-downs
 
 ## Dashboard Overview
 
@@ -146,13 +146,69 @@ The dashboard provides a clear profile of the customer base and shows how sales 
 Customer characteristics and location provide useful context for targeted marketing and customer engagement rather than applying a single strategy to the entire customer base.
 
 
-## Strategic Marketing Recommendations
+🎯 Customer Segmentation
 
-Based on the behavioral findings in the RFM matrix, the following actions are recommended for the business:
+Customers are classified into 11 RFM-based segments, including:
 
-Execute Immediate Churn Win-Back Campaigns: Target the "Cannot Lose Them" and "At Risk" groups with aggressive re-engagement campaigns, exclusive loyalty perks, or personalized feedback surveys to safeguard the $11.2M in vulnerable revenue.
-Optimize the Onboarding Funnel: Cultivate the high-volume "Promising" and "New Customer" pools with targeted product recommendations and milestone discounts to seamlessly guide them into becoming lifelong *"Champions"*.
-Targeted Ad Spend Allocation: Double down on marketing spend targeted at the 55–74 age bracket, utilizing messaging and channels tailored to their distinct buying preferences.
+Champions, Loyal, Cannot Lose Them, At Risk, About To Sleep, Hibernating Customers, Lost Customers, Need Attention, New Customers, Potential Loyalist, and Promising.
+
+Key Finding
+
+Customers demonstrate different levels of engagement, purchasing frequency, and monetary value.
+
+Business Insight:
+The customer base should be managed using segment-specific strategies rather than a one-size-fits-all approach.
+
+👤 Customer Details
+
+The Customer Details page provides customer-level information including:
+
+Customer Number
+Name & Email
+Age
+Gender
+Marital Status
+City & Country
+Total Sales
+Customer Segment
+Key Finding
+
+The page connects segment-level analysis to individual customers.
+
+Business Insight:
+Stakeholders can identify exactly which customers require retention, loyalty, re-engagement, or development actions.
+
+🔎 RFM Analysis & Marketing Actions
+
+RFM analysis evaluates customers using:
+
+Recency (R): How recently they purchased.
+Frequency (F): How often they purchased.
+Monetary (M): How much they spent.
+
+The dashboard links each segment to an appropriate marketing direction.
+
+Customer Group	Marketing Direction
+Champions	Reward and retain
+Loyal	Strengthen loyalty
+Cannot Lose Them	Prioritize retention
+At Risk	Re-engage and retain
+Potential Loyalist	Encourage repeat purchases
+New Customers	Nurture and onboard
+Hibernating / Lost	Reactivate or win back
+
+## Key Findings
+Business Question	                                              Finding & Insight
+* Who are our customers?	  Customers differ across age, gender, marital status, location, sales contribution, and purchasing behavior.
+* Which customers are most valuable?	RFM segmentation identifies high-value groups such as Champions and Cannot Lose Them.
+* Which customers require attention?	At Risk, About To Sleep, Hibernating, and Lost Customers indicate declining engagement and retention opportunities.
+* Who has growth potential?	New Customers, Promising, and Potential Loyalists provide opportunities for developing stronger long-term relationships.
+* What should marketing do?	Different segments require different actions, ranging from loyalty rewards and retention to reactivation and win-back campaigns.
+* Who should be targeted?	The Customer Details page identifies the individual customers behind each segment, enabling more precise targeting.
+
+## Business Insights
+
+
 
 ---
 
