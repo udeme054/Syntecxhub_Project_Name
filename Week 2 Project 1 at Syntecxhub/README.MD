@@ -5,7 +5,7 @@
 * [Business Problems]
 * [Business Questions]
 * [Dataset Description]
-* [Tools & Technologies]
+* [Tools used]
 * [Data Cleaning & Preparation]
 * [Data Modeling]
 * [DAX Measures Used]
@@ -58,7 +58,12 @@ Key metrics:
 
 * Key fields include Customer Number, Age, Gender, Marital Status, City, Country, Product, Sales, Order Date, and Customer Segment.
 
-## Tools & Technologies
+## Tools Used
+* Power BI desktop 
+* Power Query
+* DAX (Data Analysis Expressions): Used to construct calculated columns and measures for RFM scoring, customer counts, and ranking.
+* Data visualization and Modeling
+* GitHub | Linkedln (Project Documentation)
 
 ## Data Cleaning and preparation
 Data preparation was performed using Power Query, including:
