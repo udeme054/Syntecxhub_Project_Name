@@ -69,13 +69,13 @@ Data preparation was performed using Power Query, including:
 * Validating relationships and analytical fields.
 
 ## DAX Measures
-Total Sales =
+1. Total Sales =
 SUM(FactInternetSales[SalesAmount])
 
+2. Nos of Customers = DISTINCTCOUNT('Customer_Data'[CustomerKey])
 
-    
-  Total Customers
-  Nos of Customers = DISTINCTCOUNT('Customer_Data'[CustomerKey])
+3. Frequency value = DISTINCTCOUNT('FactInternetSales'[SalesOrderLineNumber])
+
     
  ### 2. RFM Component Calculations
 These measures calculate the foundational parameters for each individual customer.
