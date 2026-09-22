@@ -191,11 +191,9 @@ The Customer Details page provides customer-level information including:
 * Total Sales
 * Customer Segment
 
-* Key Finding
-The page connects segment-level analysis to individual customers.
+* Key Finding: The page connects segment-level analysis to individual customers.
 
-* Business Insight:
-Stakeholders can identify exactly which customers require retention, loyalty, re-engagement, or development actions.
+* Business Insight:Stakeholders can identify exactly which customers require retention, loyalty, re-engagement, or development actions.
 
 ## RFM Analysis & Marketing Actions
 
@@ -207,14 +205,14 @@ RFM analysis evaluates customers using:
 
 The dashboard links each segment to an appropriate marketing direction.
 
-#Customer Group	                         Marketing Direction
-Champions	                            Reward and retain
-Loyal	                                Strengthen loyalty
-Cannot Lose Them	                    Prioritize retention
-At Risk	                                Re-engage and retain
-Potential Loyalist	                    Encourage repeat purchases
-New Customers	                        Nurture and onboard
-Hibernating / Lost	                    Reactivate or win back
+#Customer Group	                         **Marketing Direction**
+*Champions	                            Reward and retain
+*Loyal	                                Strengthen loyalty
+*Cannot Lose Them	                    Prioritize retention
+*At Risk	                                Re-engage and retain
+*Potential Loyalist	                    Encourage repeat purchases
+*New Customers	                        Nurture and onboard
+*Hibernating / Lost	                    Reactivate or win back
 
 ## Key Findings
 * Customers differ across age, gender, marital status, location, sales contribution, and purchasing behavior.
