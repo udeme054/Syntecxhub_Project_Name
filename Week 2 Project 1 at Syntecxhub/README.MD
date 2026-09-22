@@ -69,44 +69,53 @@ Data preparation was performed using Power Query, including:
 * Validating relationships and analytical fields.
 
 ## DAX Measures
-1. Total Sales =
-SUM(FactInternetSales[SalesAmount])
+1. Total Sales = SUM(FactInternetSales[SalesAmount])
 
 2. Nos of Customers = DISTINCTCOUNT('Customer_Data'[CustomerKey])
 
 3. Frequency value = DISTINCTCOUNT('FactInternetSales'[SalesOrderLineNumber])
 
-    
- ### 2. RFM Component Calculations
-These measures calculate the foundational parameters for each individual customer.
+4. Last_transaction date = 
+Maxx(FILTER(FactInternetSales, FactInternetSales[CustomerKey] = FactInternetSales[CustomerKey]),FactInternetSales[OrderDate])
 
- Recency (Days since last purchase):
-  Finds the gap between the maximum overall transaction date in the dataset and each customer's last purchase date.
-    Customer Recency
-  Customer Frequency = 
-    CALCULATE(DISTINCTCOUNT('Sales_Data'[OrderNumber]), ALLEXCEPT('Sales_Data', 'Customer_Data'[CustomerKey]))
-    
-  Monetary Value (Total spend per customer)
-    Customer Monetary Value = 
-    CALCULATE([Total Sales], ALLEXCEPT('Sales_Data', 'Customer_Data'[CustomerKey]))
-  
-  ### 3. RFM Scoring (Using Percentiles / NTILE equivalent)
-  Customers are assigned a score from 1 to 5 for each metric using the RANKX function to divide them into quintiles.
+5. Monetary value = 
+Calculate(
+SUM(FactInternetSales[SalesAmount]),
+ALLEXCEPT('FactInternetSales','FactInternetSales'[CustomerKey]
+))
 
-    Recency Score:
-    Recency Score = 
-    VAR CustomerRank = RANKX(ALL('Customer_Data'), [Customer Recency], , ASC, Dense)
-    VAR TotalCustomers = COUNTROWS(ALL('Customer_Data'))
-    RETURN
-    SWITCH(
-        TRUE(),
-        CustomerRank <= TotalCustomers * 0.2, 5,
-        CustomerRank <= TotalCustomers * 0.4, 4,
-        CustomerRank <= TotalCustomers * 0.6, 3,
-        CustomerRank <= TotalCustomers * 0.8, 2,
-        1
-    )
-    
+6. Recency Value = DATEDIFF([Last_transaction date],TODAY(),DAY)
+
+7. RFM Table = SUMMARIZE('FactInternetSales','FactInternetSales'[CustomerKey],"Recency Value",[Recency Value],"Frequency value",[Frequency value],"Monetary value",[Monetary value])
+
+8. Recency Scores = 
+Switch(
+    True(),
+    [Recency Value] <= PERCENTILE.INC('RFM Table'[Recency Value], 0.20), 5,
+    [Recency Value] <= PERCENTILE.INC('RFM Table'[Recency Value], 0.40), 4,
+    [Recency Value] <= PERCENTILE.INC('RFM Table'[Recency Value], 0.60), 3,
+    [Recency Value] <= PERCENTILE.INC('RFM Table'[Recency Value], 0.80), 2,  1
+)
+
+9. Frequency Scores = 
+Switch(
+    True(),
+    [Frequency value] <= PERCENTILE.INC('RFM Table'[Frequency value], 0.20), 1,
+    [Frequency value] <= PERCENTILE.INC('RFM Table'[Frequency value], 0.40), 2,
+    [Frequency value] <= PERCENTILE.INC('RFM Table'[Frequency value], 0.60), 3,
+    [Frequency value] <= PERCENTILE.INC('RFM Table'[Frequency value], 0.80), 4,  5)
+
+10. Monetary Scores = 
+Switch(
+    True(),
+    [Monetary value] <= PERCENTILE.INC('RFM Table'[Monetary value], 0.20), 1,
+    [Monetary value] <= PERCENTILE.INC('RFM Table'[Monetary value], 0.40), 2,
+    [Monetary value] <= PERCENTILE.INC('RFM Table'[Monetary value], 0.60), 3,
+    [Monetary value] <= PERCENTILE.INC('RFM Table'[Monetary value], 0.80), 4,  5)
+
+11. RFM Scores = 'RFM Table'[Recency Scores] & 'RFM Table'[Frequency Scores] & 'RFM Table'[Monetary Scores]
+
+
 ## Strategic Marketing Recommendations
 
 Based on the behavioral findings in the RFM matrix, the following actions are recommended for the business:
