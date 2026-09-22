@@ -7,6 +7,7 @@
 * [Dataset Description]
 * [Tools & Technologies]
 * [Data Cleaning & Preparation]
+* [Data Modeling]
 * [DAX Measures Used]
 * [Key Performance Indicators]
 * [Visualization Created]
@@ -66,6 +67,18 @@ Data preparation was performed using Power Query, including:
 * Creating/validating age bands.
 * Preparing transaction data for RFM analysis.
 * Validating relationships and analytical fields.
+
+## Data Modelling
+A structured Power BI data model was created to connect customer, order, product, and transaction information.
+The model enables analysis across:
+* Customers
+* Orders
+* Products
+* Sales
+* Demographics
+* RFM metrics
+* Customer segments
+Relationships were configured to allow customer-level filtering and drill-down across the dashboard.
 
 ## DAX Measures
 1.  CORE KPI MEASURES
@@ -163,15 +176,16 @@ The customer base should be managed using segment-specific strategies rather tha
 
 The Customer Details page provides customer-level information including:
 
-Customer Number
-Name & Email
-Age
-Gender
-Marital Status
-City & Country
-Total Sales
-Customer Segment
-Key Finding
+* Customer Number
+* Name & Email
+* Age
+* Gender
+* Marital Status
+* City & Country
+* Total Sales
+* Customer Segment
+
+* Key Finding
 
 The page connects segment-level analysis to individual customers.
 
@@ -182,23 +196,23 @@ Stakeholders can identify exactly which customers require retention, loyalty, re
 
 RFM analysis evaluates customers using:
 
-Recency (R): How recently they purchased.
-Frequency (F): How often they purchased.
-Monetary (M): How much they spent.
+* Recency (R): How recently they purchased.
+* Frequency (F): How often they purchased.
+* Monetary (M): How much they spent.
 
 The dashboard links each segment to an appropriate marketing direction.
 
-Customer Group	Marketing Direction
-Champions	Reward and retain
-Loyal	Strengthen loyalty
-Cannot Lose Them	Prioritize retention
-At Risk	Re-engage and retain
-Potential Loyalist	Encourage repeat purchases
-New Customers	Nurture and onboard
-Hibernating / Lost	Reactivate or win back
+#Customer Group	                        #Marketing Direction
+Champions	                            Reward and retain
+Loyal	                                Strengthen loyalty
+Cannot Lose Them	                    Prioritize retention
+At Risk	                                Re-engage and retain
+Potential Loyalist	                    Encourage repeat purchases
+New Customers	                        Nurture and onboard
+Hibernating / Lost	                    Reactivate or win back
 
 ## Key Findings
-Business Question	                                              Finding & Insight
+## Business Question	               ## Finding & Insight
 * Who are our customers?	  Customers differ across age, gender, marital status, location, sales contribution, and purchasing behavior.
 * Which customers are most valuable?	RFM segmentation identifies high-value groups such as Champions and Cannot Lose Them.
 * Which customers require attention?	At Risk, About To Sleep, Hibernating, and Lost Customers indicate declining engagement and retention opportunities.
