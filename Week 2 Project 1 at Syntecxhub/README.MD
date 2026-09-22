@@ -55,7 +55,8 @@ Key metrics:
 * 11 Customer Segments
 * 6 Countries
 * $29.36M Total Sales
-Key fields include Customer Number, Age, Gender, Marital Status, City, Country, Product, Sales, Order Date, and Customer Segment.
+
+* Key fields include Customer Number, Age, Gender, Marital Status, City, Country, Product, Sales, Order Date, and Customer Segment.
 
 ## Data Cleaning
 Data preparation was performed using Power Query, including:
