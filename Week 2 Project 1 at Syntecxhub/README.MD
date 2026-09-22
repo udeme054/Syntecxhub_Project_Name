@@ -114,7 +114,7 @@ Switch(
 4. RFM Table
 * RFM Table = SUMMARIZE('FactInternetSales','FactInternetSales'[CustomerKey],"Recency Value",[Recency Value],"Frequency value",[Frequency value],"Monetary value",[Monetary value])
 
-Last_transaction date = 
+* Last_transaction date = 
 Maxx(FILTER(FactInternetSales, FactInternetSales[CustomerKey] = FactInternetSales[CustomerKey]),FactInternetSales[OrderDate])
 
 ## Key Performance Indicators (KPIs)
@@ -139,11 +139,10 @@ Interactive Drill-downs
 
 Analyzes customers by age, age band, gender, marital status, country, city, and sales.
 
-Key Finding
-
+* Key Finding
 The dashboard provides a clear profile of the customer base and shows how sales vary across demographic and geographic groups.
 
-Business Insight:
+* Business Insight:
 Customer characteristics and location provide useful context for targeted marketing and customer engagement rather than applying a single strategy to the entire customer base.
 
 
