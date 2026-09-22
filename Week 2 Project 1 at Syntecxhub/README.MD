@@ -58,6 +58,8 @@ Key metrics:
 
 * Key fields include Customer Number, Age, Gender, Marital Status, City, Country, Product, Sales, Order Date, and Customer Segment.
 
+## Tools & Technologies
+
 ## Data Cleaning and preparation
 Data preparation was performed using Power Query, including:
 
@@ -205,14 +207,18 @@ RFM analysis evaluates customers using:
 
 The dashboard links each segment to an appropriate marketing direction.
 
-#Customer Group	                         **Marketing Direction**
-*Champions	                            Reward and retain
-*Loyal	                                Strengthen loyalty
-*Cannot Lose Them	                    Prioritize retention
-*At Risk	                                Re-engage and retain
-*Potential Loyalist	                    Encourage repeat purchases
-*New Customers	                        Nurture and onboard
-*Hibernating / Lost	                    Reactivate or win back
+### Customer Groups & Marketing Direction
+
+| Customer Group         | Marketing Direction        |
+| ---------------------- | -------------------------- |
+| **Champions**          | Reward and retain          |
+| **Loyal**              | Strengthen loyalty         |
+| **Cannot Lose Them**   | Prioritize retention       |
+| **At Risk**            | Re-engage and retain       |
+| **Potential Loyalist** | Encourage repeat purchases |
+| **New Customers**      | Nurture and onboard        |
+| **Hibernating / Lost** | Reactivate or win back     |
+
 
 ## Key Findings
 * Customers differ across age, gender, marital status, location, sales contribution, and purchasing behavior.
@@ -250,7 +256,21 @@ The dashboard links each segment to an appropriate marketing direction.
 
 6. **Combine demographics with RFM analysis:** Use customer demographics together with Recency, Frequency, and Monetary scores to improve campaign targeting and marketing resource allocation.
 
+# Skills Demonstrated
+* Power BI: Dashboard Development, Data Visualization, KPI Design, Slicers, Drill-downs
+* Power Query: Data Cleaning, Transformation, Data Preparation
+* DAX: Measures, Aggregations, RFM Calculations, KPI Development
+* Analytics: Customer Analytics, RFM Analysis, Customer Segmentation, Demographic Analysis, Sales Analysis
+* Business Intelligence: Data Storytelling, Business Problem Solving, Insight Generation, Customer Retention Strategy
 
+👨‍💻 Author
+
+Udeme Jackson
+Chemical Engineer | Entry-Level Data Analyst
+
+Technical Skills: Excel | SQL | Power BI | Power Query | DAX
+
+Passionate about transforming raw data into meaningful insights, interactive dashboards, and actionable business recommendations.
 
 ---
 
