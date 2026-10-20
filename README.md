@@ -8,3 +8,12 @@ Tools Used: Power BI, Data Modeling, DAX, Data Visualization
 Key Features: KPI Cards, Interactive Slicers, Trend Analysis, Product Performance Analysis, Profitability Insights, and Growth Tracking.
 
 ![Image alt](https://github.com/udeme054/Syntecxhub_Project_Name/blob/e6b886c9abf8ce010d30db58fddf5f5da64deced/E-Commerce%20sales%20performance%20dashboard%20for%20week%201%20project%201%20at%20Syntecxhub.jpg)
+
+
+| Area | Tables |
+|---|---|
+| Operations | Trips, Loads, Routes, Delivery events |
+| Customers and facilities | Customers, Facilities |
+| Fleet | Trucks, Trailers, Truck utilization metrics |
+| People | Drivers, Driver monthly metrics |
+| Costs and safety | Fuel purchases, Maintenance records, Safety incidents |
