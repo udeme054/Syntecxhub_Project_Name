@@ -1,6 +1,5 @@
 # E-Commerce Sales Performance Dashboard (Power BI)
 
-![E-Commerce Sales Dashboard](dashboard.jpg)
 
 ## Table of Contents
 1. [Project Title](#e-commerce-sales-performance-dashboard-power-bi)
