@@ -53,12 +53,16 @@ Source: `ecommerce_sales_data.csv`, containing **3,500 orders and 7 columns**, f
 | Profit | Profit earned on the order |
 
 ## DAX Measures Used
-Measures are stored in a dedicated `_Measures` table. The core ones, which reproduce the dashboard values, are:
+Measures are stored in a dedicated `_Measures` table. They include:
 
 ```DAX
 Total Sales    = SUM('E-commerce sales data'[Sales])
 Total Profit   = SUM('E-commerce sales data'[Profit])
+Total Revenue = Sum('E-commerce sales data'[Revenue])
 Total Quantity = SUM('E-commerce sales data'[Quantity])
+Gross Profit Margin = Divide([Total Profit], [Total Revenue], 0)
+Previous year sales = CALCULATE([Total Sales], SAMEPERIODLASTYEAR('E-commerce sales data'[Order Date].[Date]))
+Yearly Growth rate % = Divide([Total Sales]-[Previous year sales],[Previous year sales], 0) * 100
 ```
 
 Time analysis (year, quarter, month) uses the date hierarchy built from `Order Date`.
