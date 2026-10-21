@@ -59,7 +59,7 @@ The report uses a `_Measures` table. Most cards use simple aggregations of colum
 | Total Employees | `COUNT(HR_Analytics[EmpID])` |
 | Attrition Count | `CALCULATE(COUNT(HR_Analytics[EmpID]), HR_Analytics[Attrition] = "Yes")` |
 | Active Employees | `CALCULATE(COUNT(HR_Analytics[EmpID]), HR_Analytics[Attrition] = "No")` |
-| Attrition Rate | `DIVIDE([Attrition Count], [Total Employees])` |
+| Attrition Rate | `SUM(HR_Analytics[Attrition count])/SUM(HR_Analytics[EmployeeCount])` |
 | Average Age | `AVERAGE(HR_Analytics[Age])` |
 | Average Tenure | `AVERAGE(HR_Analytics[YearsAtCompany])` |
 | Average Monthly Salary | `AVERAGE(HR_Analytics[MonthlyIncome])` |
