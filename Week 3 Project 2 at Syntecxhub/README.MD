@@ -1,7 +1,5 @@
 # HR Analytics: Employee Attrition Dashboard (Power BI)
 
-![HR Analysis Dashboard](dashboard.jpg)
-
 ## Table of Contents
 1. [Project Title](#hr-analytics-employee-attrition-dashboard-power-bi)
 2. [Project Overview](#project-overview)
@@ -143,7 +141,7 @@ The company has a **16.08% attrition rate (238 of 1,480 employees)**. Leavers ar
 ## Author
 **Udeme Jackson**
 Data Analyst
-[LinkedIn link: https://www.linkedin.com/posts/udeme-jackson-0a0887144_powerbi-hranalytics-dataanalytics-activity-7473634834574286848-RZja?utm_source=share&utm_medium=member_desktop&rcm=ACoAACMDV7gBXE-tE0ZG2fYv2alSEQVhZV173Wc](#) | [GitHub](#) | [Email](#)
+[LinkedIn](#) | [GitHub](#) | [Email](#)
 
 ## How to run/view run the project
 1.Dashboard: Open the dashboard file in the week 3 project 2 at syntecxhub folder to interact with the visualization
